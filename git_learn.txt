@@ -1,0 +1,55 @@
+一、Git配置
+	git config 工具，即git config 命令
+	
+	git config --global user.name ''  设置用户名
+	git config --global user.email '' 设置用户邮箱
+	此配置保存在用户的主目录下，当不加 --global 时，此配置保存在当前工作目录下的 git 目录中。
+	
+	git config --list   查看配置信息
+	
+	git help 命令
+	git 命令 --help
+	man git-命令        此三条都是查看命令的帮助，第一个用的多
+二、工作目录下文件状态
+	git status -s 查看当前目录下文件状态，-s表示简略显示
+	Untracked files 表示未跟踪的文件，??(红色)
+			git.txt(红色)
+	git add 文件名    将此文件变成可跟踪的文件
+	Changes to be committed   表示未跟踪文件已加入跟踪并放入暂存区中 A(绿色)
+			new file:   git.txt(绿色)
+	Changes not staged for commit  表示已跟踪文件被修改 M(红色)
+			modified:   git.txt(红色)
+	当使用git add 后，
+	Changes to be committed             M(绿色)
+			modified:   git.txt(绿色) 
+
+	git diff  查看当前文件与暂存区中文件的差异
+	git diff --staged/cached  查看暂存区文件与已提交文件之间的差异
+
+	git commit -m 注释  将在暂存区中的更新提交到厂库中
+	git commit -a -m 注释 可以将没在暂存区中的提交到厂库中
+
+	git rm 文件名  删除文件但必须将此文件移除已跟踪文件的清单，否则
+	Changes but not updated (也就是_未暂存_清单)
+
+	git mv 文件名 新文件名    对文件进行更名
+
+	git log     查看提交历史
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
