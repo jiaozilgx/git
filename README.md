@@ -41,13 +41,14 @@
 	M  README.md(绿色)
 	文件由暂存区提交到库中：
 	On branch master
-		Your branch is ahead of 'origin/master' by 1 commit.
+		Your branch is ahead of 'origin/master' by 1 commit. 
+		你的分支相比以前的''origin/master'多了1此提交。
 		  (use "git push" to publish your local commits)
 
 		nothing to commit, working tree clean
 
 	空
-
+	新建文件后：
 
 
 
