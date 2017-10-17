@@ -20,7 +20,7 @@
 	On branch master
 		Your branch is up-to-date with 'origin/master'.
 
-		Changes not staged for commit: 更改没有用于提交
+		Changes not staged for commit: 更改但没有用于提交
 		  (use "git add <file>..." to update what will be committed)
 		  (use "git checkout -- <file>..." to discard changes in working directory)
 
@@ -49,6 +49,18 @@
 
 	空
 	新建文件后：
+	On branch master
+		Your branch is ahead of 'origin/master' by 4 commits.
+		  (use "git push" to publish your local commits)
+
+		Untracked files: 未跟踪的文件
+		  (use "git add <file>..." to include in what will be committed)
+
+				sss.txt
+
+		nothing added to commit but untracked files present (use "git add" to track)
+	
+	?? sss.txt
 
 
 
