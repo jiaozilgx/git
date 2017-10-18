@@ -109,7 +109,11 @@
 	git rm file 从版本库中彻底删除文件
 	注：若没有在版本库中删除文件，可以用 git checkout -- file 来恢复
 
-
+七、上传到远程版本库
+	git remote add origin git@github.com:jiaozilgx/git.git
+	将本地仓库与远程的连接
+	git push -u origin master 首次推送
+	git push origin master 以后推送
 
 
 
