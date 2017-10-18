@@ -133,9 +133,11 @@
 			  再合并分支
 
 		  再合并dev分支
+	git log --graph 查看分支合并图
 
-
-
+十、合并分支
+	默认模式 Fast forward模式
+	禁用Fast forward模式
 
 
 
