@@ -122,11 +122,14 @@
 	
 	git branch 查看当前分支
 
+	git branch dev 合并dev分支到当前分支
 
+	git branch -d dev 删除dev分支
 
-
-
-
+九、冲突
+	对于多个分支，每个分支都有各自的修改，在合并的时候就会产生冲突
+	解决方式：git status 查看两个分支提交的各自差异
+			  手动将差异修改
 
 
 
