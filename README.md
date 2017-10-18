@@ -61,9 +61,53 @@
 		nothing added to commit but untracked files present (use "git add" to track)
 	
 	?? sss.txt
+	新文件加入暂存区后：
+	On branch master
+		Your branch is ahead of 'origin/master' by 4 commits.
+		  (use "git push" to publish your local commits)
 
+		Changes to be committed:
+		  (use "git reset HEAD <file>..." to unstage)
 
+				modified:   README.md
+				new file:   sss.txt
 
+	A  sss.txt
+
+三、查看提交历史
+	git log
+	git log --pretty=oneline 以一行的形式显示
+		28a3fc865bb145d2c051a291c4016c6a4dbca699 (HEAD -> master) 20
+		3b05aa1ccd66065686301c99a08cceb94ac075ea 19
+		332eb6f08ec9a5508b69a4ccfa3d17075051e848 18
+		caae3e60b7ca976dc40518765c651cc6d3581367 17
+		8d1ebcf618b8847861521a3547f66cbbaa58c1a3 17/10/17 23:28
+		34241fe2ae3caa704702b34767be9e40e295ae78 (origin/master, origin/HEAD) 17/10/15
+		5f50d595729dcfbfcc0f3a3c599543aee4435b14 Initial commit
+	
+	git reset --hard HEAD^ 退回到上个版本
+	git reset --hard 版本号 退回到指定版本
+
+	git reflog 记录了每条命令，即历史命令
+
+四、查看区别
+	工作区、版本区（暂存区、分支）
+	git diff HEAD -- README.md 工作区与版本库最新版本的区别
+	git diff 查看当前文件与暂存区中文件的差异
+	git diff --staged/cached  查看暂存区文件与已提交文件之间的差异
+
+五、撤销修改
+	git checkout -- file 丢弃工作区的修改
+	两种情况：
+		1.修改的已加入暂存区后再修改
+			退回到加入暂存区的状态
+		2.修改的没加入暂存区
+			退回到工作区clean的状态
+	git reset HEAD file 把暂存区的撤销
+
+六、删除文件
+	git rm file 从版本库中彻底删除文件
+	注：若没有在版本库中删除文件，可以用 git checkout -- file 来恢复
 
 
 
