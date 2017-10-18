@@ -115,5 +115,42 @@
 	git push -u origin master 首次推送
 	git push origin master 以后推送
 
+八、分支
+	git branch dev 创建分支dev
+	git checkout dev 切换到分支dev
+	git checkout -b dev 上两条命令的合并
+	
+	git branch 查看当前分支
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
 
 
