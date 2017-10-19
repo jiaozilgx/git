@@ -125,6 +125,7 @@
 	git branch dev 合并dev分支到当前分支
 
 	git branch -d dev 删除dev分支
+	git branch -D dev 强行删除没有合并过的dev分支
 
 九、冲突
 	对于多个分支，每个分支都有各自的修改，在合并的时候就会产生冲突
@@ -138,16 +139,32 @@
 十、合并分支
 	默认模式 Fast forward模式
 	禁用Fast forward模式
+	git merge --no-ff -m 'merge with --no-ff' dev
+	
+	git log --graph 可以看一下这两个模式的区别
 
+十一、分支策略
+	master —— 用于发布新版本，平时不在上面工作
+	dev —— 开发分支，主要工作分支
+	bug —— 在开发到中途，发现了Bug，单dev分支的内容无法提交，即dev分支不是clean
+		   则先使用 git stash 将dev分支的当前工作现场存储起来，
+		   再切换到有问题的分支，比如：git checkout master ，
+		   接着创建临时bug分支，git branch xxxx-bug ，
+		   合并bug分支，并删除bug分支，
+		   最后切换到dev分支，git stash list 查看储存的工作区
+							  git stash apply stash@{n} 恢复指定的工作区
+							  git stash drop stash@{n} 删除指定工作区
+							  git stash pop stash@{n} 恢复并删除指定工作区
+	feature —— 功能分支，合并到dev分支上
 
+十二、多人协作
+	git remote 查看远程库的信息
+	git remote -v 查看远程库的详细信息
 
+	git checkout -b dev origin/dev 在本地创建和远程分支对应的分支
+	git branch --set-upstream dev origin/dev 建立本地分子与远程分支的关联
 
-
-
-
-
-
-
+	git pull 当我的提交与最新的origin/dev有冲突时，将最新的 git pull 下来，修改冲突，再提交
 
 
 
